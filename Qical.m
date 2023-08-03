@@ -8,5 +8,5 @@ function Qi = Qical (Ki)
       Qi(i,2) = Qi(i-1,2)/Ki(i);
    end
  % Qi is a matrix with a size number of criteria and 2 columns the first is
-% the index of criteria and the second is the Ki
+% the index of criteria and the second is the Qi
 end
