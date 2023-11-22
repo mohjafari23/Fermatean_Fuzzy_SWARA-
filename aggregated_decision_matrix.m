@@ -6,8 +6,8 @@ function Adm = aggregated_decision_matrix (Dm,wdm)
 % membership grade that he evaluates the criteria with.
   [nc,~] = size(Dm);
   Adm = zeros([nc,2]);
-  MDMm = Dm(:,2:2:end);
-  NMDMm = Dm(:,1:2:end);
+  MDMm = Dm(:,1:2:end);
+  NMDMm = Dm(:,2:2:end);
   Adm(:,1) = prod((MDMm .^ repmat(wdm,[nc,1])),2);
   Adm(:,2) = power((1-prod(((1 - NMDMm.^3).^repmat(wdm,[nc,1])),2)),1/3);
   % The Adm is an aggregated decision matrix with rows of number of criteria and columns
